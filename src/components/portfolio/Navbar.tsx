@@ -218,9 +218,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, onToggle }) => {
             {isDark ? <SunIcon size={18} /> : <MoonIcon size={18} />}
           </button>
 
-          {/* Hire Me — hidden on very small screens via media query below */}
+          {/* Contact call to action */}
           <a href="#contact" style={hireBtnStyle} className="navbar-hire-btn">
-            Hire Me
+            Contact Me
           </a>
 
           {/* Hamburger — shown on mobile */}
@@ -265,7 +265,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, onToggle }) => {
           }}
           onClick={() => setMenuOpen(false)}
         >
-          Hire Me
+          Contact Me
         </a>
       </div>
 
