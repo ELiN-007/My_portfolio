@@ -48,7 +48,7 @@ const Experience: React.FC<ExperienceProps> = ({ isDark, experiences }) => {
           </span>
         </h2>
         <p style={{ color: textSecondary, marginTop: '16px', fontSize: '17px', maxWidth: '540px', margin: '16px auto 0' }}>
-          A timeline of my professional career and academic background.
+          A summary of my work experience and education.
         </p>
       </div>
 

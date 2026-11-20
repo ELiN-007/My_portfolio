@@ -392,11 +392,11 @@ const Hero: React.FC<HeroProps> = ({ isDark, data, stats }) => {
             {/* CTA buttons */}
             <div style={ctaRowStyle}>
               <a
-                href="#projects"
+                href="#contact"
                 style={primaryBtnStyle}
                 className="hero-primary-btn"
               >
-                View My Work
+                Contact Me
               </a>
               <a
                 href={resumeHref}
@@ -492,7 +492,7 @@ const Hero: React.FC<HeroProps> = ({ isDark, data, stats }) => {
                 />
               </div>
 
-              {/* Open to Work badge */}
+              {/* Internship badge */}
               <div style={openBadgeStyle}>
                 <span
                   style={{
@@ -504,7 +504,7 @@ const Hero: React.FC<HeroProps> = ({ isDark, data, stats }) => {
                     animation: 'pulseGreen 1.4s ease-in-out infinite',
                   }}
                 />
-                Open to Work
+                Seeking Internship
               </div>
 
               {/* Floating skill chips */}

@@ -166,7 +166,7 @@ const Footer: React.FC<FooterProps> = ({ isDark, social }) => {
           <div style={topRowStyle}>
             {/* Logo + name */}
             <a href="#home" style={logoStyle}>
-              <div style={logoMonogramStyle}>AR</div>
+              <div style={logoMonogramStyle}>YF</div>
               <span style={logoNameStyle}>Ya Fa Elin</span>
             </a>
 

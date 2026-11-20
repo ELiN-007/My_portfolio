@@ -174,9 +174,9 @@ const Contact: React.FC<ContactProps> = ({ isDark, data }) => {
       <div style={containerStyle}>
         <div style={headerStyle}>
           <span style={tagStyle}>Contact</span>
-          <h2 style={h2Style}>Let's Work Together</h2>
+          <h2 style={h2Style}>Let's Connect</h2>
           <p style={subtitleStyle}>
-            Reach out by email or phone, or connect with me on social media.
+            I am seeking a web or software development internship. Reach out by email or phone.
           </p>
         </div>
 

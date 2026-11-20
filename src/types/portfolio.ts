@@ -75,7 +75,6 @@ export interface PortfolioData {
     bioLong: string[];
     location: string;
     availability: string;
-    yearsOfExperience: string;
     resumeUrl: string;
     phone?: string;
     social: SocialLinks;

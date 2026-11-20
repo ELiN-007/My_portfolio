@@ -6,7 +6,7 @@ import {
   CheckIcon,
   DownloadIcon,
   SparklesIcon,
-  CheckCheckIcon,
+  GraduationCapIcon,
 } from '../common/Icons';
 
 interface AboutProps {
@@ -32,38 +32,26 @@ const About: React.FC<AboutProps> = ({ isDark, data }) => {
       color: '#6366f1',
     },
     {
-      icon: <BriefcaseIcon size={18} />,
-      label: 'Experience',
-      value: data.yearsOfExperience,
+      icon: <GraduationCapIcon size={18} />,
+      label: 'Education',
+      value: 'Computer Science Student',
       color: '#06b6d4',
     },
     {
-      icon: <SparklesIcon size={18} />,
-      label: 'Availability',
-      value: 'Open to Work',
+      icon: <BriefcaseIcon size={18} />,
+      label: 'Career Goal',
+      value: 'Seeking Internship',
       color: '#10b981',
-    },
-    {
-      icon: <CheckCheckIcon size={18} />,
-      label: 'Status',
-      value: data.availability,
-      color: '#f59e0b',
     },
   ];
 
   const whatIBring = [
-    'Clean, maintainable & well-tested code',
-    'Pixel-perfect UI from Figma to production',
-    'Scalable API & database architecture',
-    'Performance optimization & Core Web Vitals',
-    'Collaborative, communicative team mindset',
-    'Rapid iteration without sacrificing quality',
-  ];
-
-  const floatingStats = [
-    { value: '35+', label: 'Projects' },
-    { value: '4+', label: 'Years Exp.' },
-    { value: '99.9%', label: 'Uptime' },
+    'HTML, CSS, and JavaScript',
+    'Node.js, Express.js, Python, and MySQL',
+    'Linux and Microsoft Azure fundamentals',
+    'Inventory tracking and stock reconciliation',
+    'Order coordination and customer service',
+    'Organized, accurate, and collaborative',
   ];
 
   return (
@@ -88,33 +76,30 @@ const About: React.FC<AboutProps> = ({ isDark, data }) => {
         >
           {/* ── LEFT COLUMN ── */}
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            {/* Gradient circle avatar */}
+            {/* Profile photo */}
             <div
               style={{
                 width: 240,
                 height: 240,
                 borderRadius: '50%',
-                background: `linear-gradient(135deg, ${accent} 0%, ${accentCyan} 100%)`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
                 position: 'relative',
                 boxShadow: `0 0 60px ${accent}44`,
                 flexShrink: 0,
+                padding: 5,
+                background: `linear-gradient(135deg, ${accent} 0%, ${accentCyan} 100%)`,
               }}
             >
-              <span
+              <img
+                src={`${import.meta.env.BASE_URL}ya-fa-elin.png`}
+                alt={`${data.name} profile`}
                 style={{
-                  fontSize: 72,
-                  fontWeight: 800,
-                  color: '#ffffff',
-                  letterSpacing: '-2px',
-                  fontFamily: 'system-ui, sans-serif',
-                  userSelect: 'none',
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  objectPosition: 'center 10%',
                 }}
-              >
-                AR
-              </span>
+              />
 
               {/* Ring decoration */}
               <div
@@ -128,49 +113,6 @@ const About: React.FC<AboutProps> = ({ isDark, data }) => {
               />
             </div>
 
-            {/* Floating stats cards */}
-            {floatingStats.map((stat, i) => {
-              const positions: React.CSSProperties[] = [
-                { top: 0, right: -20 },
-                { bottom: 20, left: -20 },
-                { bottom: 100, right: -24 },
-              ];
-              return (
-                <div
-                  key={stat.label}
-                  style={{
-                    position: 'absolute',
-                    ...positions[i],
-                    background: cardBg,
-                    border: `1px solid ${borderColor}`,
-                    borderRadius: 14,
-                    padding: '10px 16px',
-                    boxShadow: isDark
-                      ? '0 8px 24px rgba(0,0,0,0.4)'
-                      : '0 8px 24px rgba(0,0,0,0.1)',
-                    textAlign: 'center',
-                    minWidth: 80,
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: 20,
-                      fontWeight: 800,
-                      background: gradientText,
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      lineHeight: 1.1,
-                    }}
-                  >
-                    {stat.value}
-                  </div>
-                  <div style={{ fontSize: 11, color: textSecondary, marginTop: 2, whiteSpace: 'nowrap' }}>
-                    {stat.label}
-                  </div>
-                </div>
-              );
-            })}
           </div>
 
           {/* ── RIGHT COLUMN ── */}
@@ -190,7 +132,7 @@ const About: React.FC<AboutProps> = ({ isDark, data }) => {
                 }}
               >
                 <SparklesIcon size={14} />
-                <span style={{ fontSize: 13, color: accent, fontWeight: 600 }}>About Me</span>
+                <span style={{ fontSize: 13, color: accent, fontWeight: 600 }}>Internship Candidate</span>
               </div>
               <h2
                 style={{
@@ -201,7 +143,7 @@ const About: React.FC<AboutProps> = ({ isDark, data }) => {
                   fontFamily: 'system-ui, sans-serif',
                 }}
               >
-                <span style={{ color: textPrimary }}>Crafting </span>
+                <span style={{ color: textPrimary }}>Computer Science Student </span>
                 <span
                   style={{
                     background: gradientText,
@@ -210,13 +152,13 @@ const About: React.FC<AboutProps> = ({ isDark, data }) => {
                     backgroundClip: 'text',
                   }}
                 >
-                  Digital Experiences
+                  Seeking an Internship
                 </span>
               </h2>
             </div>
 
             {/* Bio paragraphs */}
-            {data.bioLong.slice(0, 2).map((para, i) => (
+            {data.bioLong.map((para, i) => (
               <p
                 key={i}
                 style={{

@@ -178,7 +178,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, onToggle }) => {
       <div style={innerStyle}>
         {/* Logo */}
         <a href="#home" style={logoWrapStyle}>
-          <div style={monogramStyle}>AR</div>
+          <div style={monogramStyle}>YF</div>
           <span style={nameStyle}>Ya Fa Elin</span>
         </a>
 

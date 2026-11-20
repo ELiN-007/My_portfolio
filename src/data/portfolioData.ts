@@ -3,22 +3,20 @@ import { PortfolioData } from '../types/portfolio';
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Ya Fa Elin",
-    headline: "Computer Science Student | Web & Software Development",
+    headline: "Computer Science Student Seeking a Software Development Internship",
     roles: [
+      "Seeking a Software Development Internship",
       "Computer Science Student",
-      "Web Developer",
-      "Software Developer",
-      "Operations Coordinator"
+      "Aspiring Web Developer"
     ],
-    bioShort: "Computer Science undergraduate with hands-on experience in web development, Linux administration, cloud fundamentals, inventory control, and customer operations.",
+    bioShort: "Computer Science undergraduate seeking an internship to apply my web development skills and continue learning in a professional team.",
     bioLong: [
-      "I am a Computer Science undergraduate at Norton University with hands-on experience in web development, Linux administration, and Microsoft Azure fundamentals.",
+      "I am a Computer Science undergraduate at Norton University seeking a software or web development internship. I am eager to apply what I have learned and gain practical experience on a professional team.",
       "My technical foundation includes HTML, CSS, JavaScript, Node.js, Express.js, Python, and MySQL. I combine these skills with practical experience in inventory operations, stock control, logistics, and customer service.",
       "I am organized, accurate, and comfortable coordinating with technical teams, finance teams, suppliers, and customers."
     ],
     location: "Phnom Penh, Cambodia",
-    availability: "Open to web and software development opportunities",
-    yearsOfExperience: "Hands-on",
+    availability: "Seeking a software development internship",
     resumeUrl: `${import.meta.env.BASE_URL}Ya_Fa_Elin_CV.pdf`,
     phone: "0969250005",
     social: {
@@ -32,24 +30,19 @@ export const portfolioData: PortfolioData = {
   },
   stats: [
     {
-      value: "2023",
-      label: "B.Sc. Start",
-      subtext: "Computer Science at Norton University"
-    },
-    {
-      value: "3",
-      label: "Work Roles",
-      subtext: "Operations and inventory experience"
-    },
-    {
-      value: "Khmer",
-      label: "Native Language",
-      subtext: "Intermediate English communication"
+      value: "B.Sc.",
+      label: "Computer Science",
+      subtext: "Norton University"
     },
     {
       value: "Web",
       label: "Development",
-      subtext: "HTML, CSS, JavaScript, Node.js"
+      subtext: "HTML, CSS, JavaScript"
+    },
+    {
+      value: "Internship",
+      label: "Seeking",
+      subtext: "Web or software development"
     }
   ],
   skills: [
