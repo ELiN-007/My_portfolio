@@ -46,19 +46,19 @@ export const portfolioData: PortfolioData = {
     }
   ],
   skills: [
-    { name: "HTML", level: 85, category: "Frontend", icon: "code", featured: true },
-    { name: "CSS", level: 80, category: "Frontend", icon: "layout", featured: true },
-    { name: "JavaScript", level: 82, category: "Frontend", icon: "code", featured: true },
-    { name: "Node.js", level: 78, category: "Backend", icon: "server", featured: true },
-    { name: "Express.js", level: 78, category: "Backend", icon: "server" },
-    { name: "Python", level: 75, category: "Backend", icon: "terminal" },
-    { name: "MySQL", level: 75, category: "Backend", icon: "database", featured: true },
-    { name: "Linux", level: 78, category: "Cloud & DevOps", icon: "terminal", featured: true },
-    { name: "Microsoft Azure", level: 70, category: "Cloud & DevOps", icon: "server" },
-    { name: "Microsoft Excel", level: 82, category: "Tools & Design", icon: "layout" },
-    { name: "Microsoft Word", level: 82, category: "Tools & Design", icon: "layout" },
-    { name: "Microsoft PowerPoint", level: 80, category: "Tools & Design", icon: "layout" },
-    { name: "Canva", level: 75, category: "Tools & Design", icon: "sparkles" }
+    { name: "HTML", category: "Frontend", icon: "code" },
+    { name: "CSS", category: "Frontend", icon: "layout" },
+    { name: "JavaScript", category: "Frontend", icon: "code" },
+    { name: "Node.js", category: "Backend", icon: "server" },
+    { name: "Express.js", category: "Backend", icon: "server" },
+    { name: "Python", category: "Backend", icon: "terminal" },
+    { name: "MySQL", category: "Backend", icon: "database" },
+    { name: "Linux", category: "Cloud & DevOps", icon: "terminal" },
+    { name: "Microsoft Azure", category: "Cloud & DevOps", icon: "server" },
+    { name: "Microsoft Excel", category: "Tools & Design", icon: "layout" },
+    { name: "Microsoft Word", category: "Tools & Design", icon: "layout" },
+    { name: "Microsoft PowerPoint", category: "Tools & Design", icon: "layout" },
+    { name: "Canva", category: "Tools & Design", icon: "sparkles" }
   ],
   projects: [],
   experiences: [

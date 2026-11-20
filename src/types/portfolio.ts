@@ -15,10 +15,8 @@ export interface StatItem {
 
 export interface SkillItem {
   name: string;
-  level: number; // 0 to 100
   category: 'Frontend' | 'Backend' | 'Cloud & DevOps' | 'Tools & Design';
   icon: string;
-  featured?: boolean;
 }
 
 export interface ProjectItem {

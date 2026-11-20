@@ -48,10 +48,6 @@ const Skills: React.FC<SkillsProps> = ({ isDark, skills }) => {
     >
       {/* Inject keyframes for progress bar animation */}
       <style>{`
-        @keyframes skillBarFill {
-          from { width: 0%; }
-          to   { width: var(--skill-level); }
-        }
         @keyframes skillCardIn {
           from { opacity: 0; transform: translateY(16px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -94,11 +90,11 @@ const Skills: React.FC<SkillsProps> = ({ isDark, skills }) => {
                 backgroundClip: 'text',
               }}
             >
-              Technology Stack
+              Skills
             </span>
           </h2>
           <p style={{ color: textSecondary, fontSize: 15, maxWidth: 520, margin: '0 auto' }}>
-            A curated set of tools and technologies I use to build fast, scalable, and elegant products.
+            Technologies and tools from my studies and practical experience.
           </p>
         </div>
 
@@ -177,31 +173,8 @@ const Skills: React.FC<SkillsProps> = ({ isDark, skills }) => {
                   el.style.borderColor = borderColor;
                 }}
               >
-                {/* Featured star badge */}
-                {skill.featured && (
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: 12,
-                      right: 12,
-                      background: `linear-gradient(135deg, #f59e0b, #fbbf24)`,
-                      color: '#ffffff',
-                      borderRadius: 999,
-                      padding: '3px 8px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 4,
-                      fontSize: 10,
-                      fontWeight: 700,
-                    }}
-                  >
-                    <StarIcon size={10} />
-                    Featured
-                  </div>
-                )}
-
                 {/* Icon + name row */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                   <div
                     style={{
                       width: 44,
@@ -224,7 +197,6 @@ const Skills: React.FC<SkillsProps> = ({ isDark, skills }) => {
                         fontSize: 14,
                         color: textPrimary,
                         lineHeight: 1.3,
-                        paddingRight: skill.featured ? 60 : 0,
                       }}
                     >
                       {skill.name}
@@ -247,45 +219,6 @@ const Skills: React.FC<SkillsProps> = ({ isDark, skills }) => {
                   </div>
                 </div>
 
-                {/* Progress bar */}
-                <div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      marginBottom: 6,
-                    }}
-                  >
-                    <span style={{ fontSize: 11, color: textSecondary }}>Proficiency</span>
-                    <span style={{ fontSize: 11, fontWeight: 700, color: catColor.text }}>
-                      {skill.level}%
-                    </span>
-                  </div>
-                  {/* Track */}
-                  <div
-                    style={{
-                      width: '100%',
-                      height: 6,
-                      borderRadius: 999,
-                      background: isDark ? '#334155' : '#e2e8f0',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    {/* Fill — uses CSS custom property for keyframe animation end-state */}
-                    <div
-                      style={{
-                        height: '100%',
-                        borderRadius: 999,
-                        background: `linear-gradient(90deg, ${accent}, ${accentCyan})`,
-                        // @ts-expect-error CSS custom property
-                        '--skill-level': `${skill.level}%`,
-                        animation: `skillBarFill 0.9s ease both`,
-                        animationDelay: `${idx * 40 + 200}ms`,
-                        width: `${skill.level}%`,
-                      }}
-                    />
-                  </div>
-                </div>
               </div>
             );
           })}
