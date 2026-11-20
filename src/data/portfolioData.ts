@@ -19,7 +19,7 @@ export const portfolioData: PortfolioData = {
     location: "Phnom Penh, Cambodia",
     availability: "Open to web and software development opportunities",
     yearsOfExperience: "Hands-on",
-    resumeUrl: "/Ya_Fa_Elin_CV.pdf",
+    resumeUrl: `${import.meta.env.BASE_URL}Ya_Fa_Elin_CV.pdf`,
     phone: "0969250005",
     social: {
       github: "",

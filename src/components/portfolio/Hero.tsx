@@ -486,7 +486,7 @@ const Hero: React.FC<HeroProps> = ({ isDark, data, stats }) => {
             <div style={avatarRingStyle}>
               <div style={avatarInnerStyle}>
                 <img
-                  src="/ya-fa-elin.png"
+                  src={`${import.meta.env.BASE_URL}ya-fa-elin.png`}
                   alt={`${data.name} profile`}
                   style={avatarImageStyle}
                 />
